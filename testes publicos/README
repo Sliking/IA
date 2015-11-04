@@ -1,0 +1,11 @@
+No test02 acho que existe uma pequena falha quando se põe isto no interpretador
+
+(ignore-value (tabuleiro-preenche! tab1 0 17))
+
+significa que estamos a alterar a posição do tabuleiro na linha 0 e coluna 17 para True. 
+Mas só que essa posição não existe. Quando o teste a seguir é feito
+
+(tabuleiro-topo-preenchido-p tab1)
+
+ele não pode retornar True, porque não foi alterado nada dentro do tabuleiro.
+Já mandei mail ao prof, estou à espera de repsosta.
