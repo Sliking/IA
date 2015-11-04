@@ -9,3 +9,5 @@ Mas só que essa posição não existe. Quando o teste a seguir é feito
 
 ele não pode retornar True, porque não foi alterado nada dentro do tabuleiro.
 Já mandei mail ao prof, estou à espera de repsosta.
+
+[UPDATE] Corre até ao test08, linha 20. O teste da linha 22 esta a devolver True, e é supsoto devolver nil.
