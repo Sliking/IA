@@ -32,9 +32,16 @@
 	 (make-array '(18 10)))
 
 (defun copia-tabuleiro(tab)
-	(let ((dims (array-dimensions tab)))
-		(adjust-array
-			(make-array dims :displaced-to tab) dims)))
+	(let ((dims (make-array (array-dimensions tab))))
+		(dotimes (x (array-dimension dims 0) dims)
+			(dotimes (y (array-dimension dims 1))
+				(setf (aref dims x y) (aref tab x y))))))
+
+
+;(defun copia-tabuleiro(tab)
+;	(let ((dims (array-dimensions tab)))
+;		(adjust-array
+;			(make-array dims :displaced-to tab) dims)))
 
 (defun tabuleiro-preenchido-p(tabuleiro linha coluna)
 	(not (equal (aref tabuleiro ( - 17 linha ) coluna ) nil)))
